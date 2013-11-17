@@ -19,7 +19,7 @@ description:
 
 source-repository head
     type:     git
-    location: https://github.org/MaxOw/stm-lifted.git
+    location: https://github.com/MaxOw/stm-lifted.git
 
 library
   default-language: Haskell2010
