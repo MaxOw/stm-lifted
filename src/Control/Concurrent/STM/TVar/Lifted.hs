@@ -34,4 +34,3 @@ modifyTVarIO' = atomically .: modifyTVar'
 
 swapTVarIO :: MonadIO m => TVar a -> a -> m a
 swapTVarIO = atomically .: swapTVar
-
