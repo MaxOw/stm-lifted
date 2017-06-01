@@ -1,3 +1,4 @@
 dist
 *.[ao]
 *.hi
+.stack-work
