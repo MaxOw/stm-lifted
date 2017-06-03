@@ -1,11 +1,11 @@
 module Control.Concurrent.STM.TQueue.Lifted
     ( module All
-	, newTQueueIO
-	, readTQueueIO
-	, tryReadTQueueIO
-	, peekTQueueIO
-	, tryPeekTQueueIO
-	, writeTQueueIO
+    , newTQueueIO
+    , readTQueueIO
+    , tryReadTQueueIO
+    , peekTQueueIO
+    , tryPeekTQueueIO
+    , writeTQueueIO
     , unGetTQueueIO
     , isEmptyTQueueIO
     ) where

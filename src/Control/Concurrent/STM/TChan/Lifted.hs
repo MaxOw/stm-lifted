@@ -1,18 +1,17 @@
 module Control.Concurrent.STM.TChan.Lifted
     ( module All
-	, newTChanIO
-	, newBroadcastTChanIO
+    , newTChanIO
+    , newBroadcastTChanIO
     , dupTChanIO
-	, readTChanIO
-	, tryReadTChanIO
-	, peekTChanIO
-	, tryPeekTChanIO
-	, writeTChanIO
+    , readTChanIO
+    , tryReadTChanIO
+    , peekTChanIO
+    , tryPeekTChanIO
+    , writeTChanIO
     , unGetTChanIO
     , isEmptyTChanIO
     , cloneTChanIO
     ) where
-
 
 import Control.Concurrent.STM.TChan as All
     hiding (newTChanIO, newBroadcastTChanIO)

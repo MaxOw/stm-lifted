@@ -1,13 +1,14 @@
 module Control.Concurrent.STM.TBQueue.Lifted
     ( module All
-	, newTBQueueIO
-	, readTBQueueIO
-	, tryReadTBQueueIO
-	, peekTBQueueIO
-	, tryPeekTBQueueIO
-	, writeTBQueueIO
+    , newTBQueueIO
+    , readTBQueueIO
+    , tryReadTBQueueIO
+    , peekTBQueueIO
+    , tryPeekTBQueueIO
+    , writeTBQueueIO
     , unGetTBQueueIO
     , isEmptyTBQueueIO
+    , isFullTBQueueIO
     ) where
 
 import Control.Concurrent.STM.TBQueue as All hiding (newTBQueueIO)
@@ -40,3 +41,6 @@ unGetTBQueueIO = atomically .: unGetTBQueue
 
 isEmptyTBQueueIO :: MonadIO m => TBQueue a -> m Bool
 isEmptyTBQueueIO = atomically . isEmptyTBQueue
+
+isFullTBQueueIO :: MonadIO m => TBQueue a -> m Bool
+isFullTBQueueIO = atomically . isFullTBQueue

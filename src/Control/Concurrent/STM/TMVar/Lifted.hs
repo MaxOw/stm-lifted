@@ -1,15 +1,15 @@
 module Control.Concurrent.STM.TMVar.Lifted
-	( module All
+    ( module All
     , newTMVarIO
-	, newEmptyTMVarIO
-	, takeTMVarIO
-	, putTMVarIO
-	, readTMVarIO
-	, tryReadTMVarIO
-	, swapTMVarIO
-	, tryTakeTMVarIO
-	, tryPutTMVarIO
-	, isEmptyTMVarIO
+    , newEmptyTMVarIO
+    , takeTMVarIO
+    , putTMVarIO
+    , readTMVarIO
+    , tryReadTMVarIO
+    , swapTMVarIO
+    , tryTakeTMVarIO
+    , tryPutTMVarIO
+    , isEmptyTMVarIO
     ) where
 
 import Control.Concurrent.STM.TMVar as All
