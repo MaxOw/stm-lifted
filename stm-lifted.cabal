@@ -13,9 +13,10 @@ stability:      Experimental
 cabal-version:  >= 1.10
 
 description:
- A MonadIO version of
- <http://hackage.haskell.org/package/stm-2.4.4.1 STM> library.
+ A MonadIO version of <http://hackage.haskell.org/package/stm STM> library.
 
+extra-source-files:
+  README.md
 
 source-repository head
     type:     git
