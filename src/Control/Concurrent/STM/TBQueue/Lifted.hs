@@ -19,7 +19,7 @@ import Internal
 
 
 newTBQueueIO :: MonadIO m => Int -> m (TBQueue a)
-newTBQueueIO = liftIO . STM.newTBQueueIO
+newTBQueueIO = liftIO . STM.newTBQueueIO . fromIntegral
 
 writeTBQueueIO :: MonadIO m => TBQueue a -> a -> m ()
 writeTBQueueIO = atomically .: writeTBQueue

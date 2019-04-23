@@ -11,7 +11,7 @@ import Internal
 ----------------------------------------------------------------------
 
 newTSemIO :: MonadIO m => Int -> m TSem
-newTSemIO = atomically . newTSem
+newTSemIO = atomically . newTSem . fromIntegral
 
 waitTSemIO :: MonadIO m => TSem -> m ()
 waitTSemIO = atomically . waitTSem

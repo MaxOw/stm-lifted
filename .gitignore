@@ -2,3 +2,5 @@ dist
 *.[ao]
 *.hi
 .stack-work
+dist-newstyle
+.ghc*
