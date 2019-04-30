@@ -5,6 +5,7 @@ module Control.Concurrent.STM.TVar.Lifted
     , writeTVarIO
     , modifyTVarIO
     , modifyTVarIO'
+    , stateTVarIO
     , swapTVarIO
     ) where
 
@@ -31,6 +32,9 @@ modifyTVarIO = atomically .: modifyTVar
 -- | Strict version
 modifyTVarIO' :: MonadIO m => TVar a -> (a -> a) -> m ()
 modifyTVarIO' = atomically .: modifyTVar'
+
+stateTVarIO :: MonadIO m => TVar s -> (s -> (a, s)) -> m a
+stateTVarIO = atomically .: stateTVar
 
 swapTVarIO :: MonadIO m => TVar a -> a -> m a
 swapTVarIO = atomically .: swapTVar

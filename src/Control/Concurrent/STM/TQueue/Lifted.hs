@@ -3,6 +3,7 @@ module Control.Concurrent.STM.TQueue.Lifted
     , newTQueueIO
     , readTQueueIO
     , tryReadTQueueIO
+    , flushTQueueIO
     , peekTQueueIO
     , tryPeekTQueueIO
     , writeTQueueIO
@@ -27,6 +28,9 @@ readTQueueIO = atomically . readTQueue
 
 tryReadTQueueIO :: MonadIO m => TQueue a -> m (Maybe a)
 tryReadTQueueIO = atomically . tryReadTQueue
+
+flushTQueueIO :: MonadIO m => TQueue a -> m [a]
+flushTQueueIO = atomically . flushTQueue
 
 peekTQueueIO :: MonadIO m => TQueue a -> m a
 peekTQueueIO = atomically . peekTQueue

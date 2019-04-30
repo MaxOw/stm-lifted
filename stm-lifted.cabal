@@ -1,15 +1,14 @@
-name:		stm-lifted
-version:        0.1.1.0
-synopsis:	Software Transactional Memory lifted to MonadIO
-license:	BSD3
-license-file:	LICENSE
+name:           stm-lifted
+version:        2.5.0.0
+synopsis:       Software Transactional Memory lifted to MonadIO
+license:        BSD3
+license-file:   LICENSE
 author:         Maksymilian Owsianny
-maintainer:	Maksymilian.Owsianny@gmail.com
+maintainer:     Maksymilian.Owsianny@gmail.com
 bug-reports:    https://github.com/MaxOw/stm-lifted/issues
-Copyright:      (c) 2013 Maksymilian Owsianny
+Copyright:      (c) 2013-2019 Maksymilian Owsianny
 category:       Concurrency, MonadIO
 build-type:     Simple
-stability:      Experimental
 cabal-version:  >= 1.10
 
 description:
@@ -25,6 +24,7 @@ source-repository head
 library
   default-language: Haskell2010
   hs-source-dirs: src
+  ghc-options: -Wall
   exposed-modules:
       Control.Concurrent.STM.Lifted
     , Control.Concurrent.STM.TVar.Lifted
@@ -37,4 +37,4 @@ library
   build-depends:
       base          >= 4.5     && < 5
     , transformers  >= 0.2     && < 0.6
-    , stm           >= 2.4.4.1 && < 3
+    , stm           >= 2.5     && < 2.6
