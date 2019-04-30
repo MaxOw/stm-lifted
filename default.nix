@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc863" }:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc864" }:
 let ghc = nixpkgs.haskell.packages.${compiler};
     tools = with ghc; [ cabal-install ghcid ];
     overrideCabal = pkg: nixpkgs.haskell.lib.overrideCabal pkg

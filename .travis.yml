@@ -2,7 +2,7 @@
 language: nix
 env:
   global:
-   - GHC_VERSION=ghc863
+   - GHC_VERSION=ghc864
 
 script: nix-build default.nix --argstr compiler $GHC_VERSION
 
